@@ -44,5 +44,30 @@ function ContactViewCtrl($scope, $http) {
 
 ContactViewCtrl.$inject = ['$scope', '$http'];
 
+function BootstrapViewCtrl($scope){
+    $scope.UserInfo = {
+        name: "Brendan",
+        phone: "5712058770",
+        active: false
+    };
+
+    $scope.EmployeeNames = [{
+        employeeName:"Brendan",
+        employeePhone: 5712058770
+    },
+    {
+        employeeName:"Megan",
+        employeePhone: 5712055453
+    },
+    {
+        employeeName:"Lady",
+        employeePhone: 5712058343
+    }];
+
+    $scope.ToggleUserInfoActive = function(UserInfo){
+        UserInfo.active = true;
+    }
+}
+
 
 
