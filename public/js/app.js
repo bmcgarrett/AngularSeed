@@ -19,6 +19,12 @@ myApp.config(function ($routeProvider) {
             templateUrl: "partials/bootstrap"
         }
     ).
+        when('/users',
+        {
+            controller: "UsersCtrl",
+            templateUrl: "partials/users"
+        }
+    ).
         otherwise({
             redirectTo: '/'
         })

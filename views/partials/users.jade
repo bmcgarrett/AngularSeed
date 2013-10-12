@@ -1,0 +1,17 @@
+.container(ng-controller="UsersCtrl")
+    .row
+        .span12
+            h3 {{ pageTitle }}
+    .row
+        .span12
+            table.table.table-bordered
+                thead
+                    tr
+                        th User ID
+                        th Name
+                tbody
+                    tr(ng-repeat="(uIndex, user) in userList")
+                        td {{ uIndex + 1 }}
+                        td {{ user.name }}
+
+
