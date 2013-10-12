@@ -1,7 +1,7 @@
 extends layout
 
 block body
-    .navbar.navbar-inverse.navbar-fixed-top
+    .navbar
         .navbar-inner
             .container
                 a.btn.btn-navbar(data-toggle="collapse",data-target=".nav-collapse")
@@ -13,13 +13,18 @@ block body
                 .nav-collapse.collapse
                     ul.nav
                         li.active
-                            a(href="#/home") Home
+                            a(href="#/") Home
                         li
                             a(href="#/bootstrap") Bootstrap
 
-    div(ng-controller="GenericViewCtrl")
-        p
-        div(ng-view)
+
+
+    div(ng-view)
+
+
+
+
+
 
 
 
