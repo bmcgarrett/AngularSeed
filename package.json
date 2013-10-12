@@ -6,6 +6,8 @@
         "karma" : "*",
         "karma-junit-reporter" : "*",    
         "karma-jasmine" : "*",
-        "karma-ng-scenario" : "*"
+        "karma-ng-scenario" : "*",
+        "express": "~3.2.6",
+    	"jade": "~0.31.2"
     }
 }

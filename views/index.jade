@@ -1,0 +1,25 @@
+extends layout
+
+block body
+    .navbar.navbar-inverse.navbar-fixed-top
+        .navbar-inner
+            .container
+                a.btn.btn-navbar(data-toggle="collapse",data-target=".nav-collapse")
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+
+                a.brand(href="#") Express Angular
+                .nav-collapse.collapse
+                    ul.nav
+                        li.active
+                            a(href="#/home") Home
+                        li
+                            a(href="#/bootstrap") Bootstrap
+
+    div(ng-controller="GenericViewCtrl")
+        p
+        div(ng-view)
+
+
+

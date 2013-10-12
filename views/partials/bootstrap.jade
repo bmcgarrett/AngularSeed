@@ -1,0 +1,24 @@
+.row
+    .span5
+        p First Name: {{ UserInfo.name }}
+        p Phone: {{ UserInfo.phone }}</p>
+        p User Active: {{ UserInfo.active }}</p>
+    .span4
+        h3 Employee Names
+        ul(ng-repeat="employee in EmployeeNames | orderBy:'employeeName'")
+            li
+                formset
+                    label Name
+                    input(ng-model="employee.employeeName")
+                    span {{ employee.employeeName }}
+                    label Employee Phone
+                    input(ng-model="employee.employeePhone")
+                    span {{ employee.employeePhone }}
+                    label Size
+                    input(ng-model="employee.size")
+                    span {{ employee.size | size }}
+        button(ng-click="ToggleUserInfoActive(UserInfo)") User Active
+    .span3
+        p {{ myName }}
+        p {{ message | uppercase }}
+        a(ng-click="ChangeMessage(message)") Change Message
