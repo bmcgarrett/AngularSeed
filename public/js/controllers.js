@@ -3,9 +3,11 @@
 /* Controllers */
 
 
-myApp.controller("IndexCtrl", function($scope) {
+myApp.controller("IndexCtrl",['$scope','name',function($scope,name) {
    $scope.pageTitle = "Home Page"
-});
+
+   $scope.userName = name;
+}]);
 
 myApp.controller("BootStrapCtrl",function($scope) {
     $scope.pageTitle = "Twitter Bootstrap Testing";
