@@ -4,7 +4,7 @@ var assert = require("assert");
 
 var should = require("should");
 
-describe('generic', function(){
+describe('Services_Name', function(){
 
     var name = "Brendan McGarrett";
 
