@@ -9,5 +9,8 @@
         "karma-ng-scenario" : "*",
         "express": "~3.2.6",
     	"jade": "~0.31.2"
+    },
+   "scripts": {
+	"test": "mocha --reporter list test/mytests"
     }
 }
