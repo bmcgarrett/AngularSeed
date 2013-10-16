@@ -46,6 +46,7 @@ app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
 
 // JSON API
+// api/users -> used to pull user list
 app.get('/api/users', api.users);
 
 // redirect all others to the index (HTML5 history)
