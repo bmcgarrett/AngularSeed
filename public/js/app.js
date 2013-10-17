@@ -2,7 +2,7 @@
 
 
 // Declare app level module which depends on filters, and services
-var myApp = angular.module('myApp',['myApp.services']);
+var myApp = angular.module('myApp',['ngResource']);
 
 
 myApp.config(function ($routeProvider) {

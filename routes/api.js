@@ -6,13 +6,16 @@ exports.users = function (req, res) {
       res.json(
           [
               {
-                  name: "Brendan"
+                  name: "Brendan",
+                  size: "s"
               },
               {
-                  name: "Megan"
+                  name: "Megan",
+                  size: "m"
               },
               {
-                  name: "Lady"
+                  name: "Lady",
+                  size: "l"
               }
           ]
       );

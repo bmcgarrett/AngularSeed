@@ -3,28 +3,23 @@
 /* Controllers */
 
 
-myApp.controller("IndexCtrl",['$scope','name',function($scope,name) {
+myApp.controller("IndexCtrl",function($scope,constants) {
    $scope.pageTitle = "Home Page"
 
-   $scope.userName = name;
-}]);
+   $scope.userName = constants.getName;
+
+});
 
 myApp.controller("BootStrapCtrl",function($scope) {
     $scope.pageTitle = "Twitter Bootstrap Testing";
+
 });
 
-myApp.controller("UsersCtrl", function($scope, $http){
+myApp.controller("UsersCtrl",function($scope, userData){
     $scope.pageTitle = "User List";
 
+    $scope.userList = userData.getUsers();
 
-    $http({method: 'GET', url: '/api/users'}).
-        success(function(data, status, headers, config) {
-            $scope.userList = data;
-            console.log(data);
-        }).
-        error(function(data, status, headers, config) {
-            $scope.userList = data;
-        });
 
 });
 

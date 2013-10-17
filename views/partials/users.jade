@@ -2,6 +2,7 @@
     .row
         .span12
             h3 {{ pageTitle }}
+            h3 {{ myTest }}
     .row
         .span12
             table.table.table-bordered
@@ -9,9 +10,11 @@
                     tr
                         th User ID
                         th Name
+                        th Size
                 tbody
                     tr(ng-repeat="(uIndex, user) in userList")
                         td {{ uIndex + 1 }}
                         td {{ user.name }}
+                        td {{ user.size | size }}
 
 
