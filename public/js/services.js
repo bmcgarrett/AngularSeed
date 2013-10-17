@@ -5,20 +5,18 @@
 // Demonstrate how to register services
 // In this case it is a simple value service.
 
-myApp.factory('userData',function($http,$q){
+myApp.factory('userData',function($resource,$q){
    return {
             getUsers: function() {
-                var deffered = $q.defer();
-
-                $http({method: 'GET', url: '/api/users'}).
-                    success(function(data, status, headers, config) {
-                        deffered.resolve(data);
-                    }).
-                    error(function(data, status, headers, config) {
-                        deffered.reject(status);
+                var deferred = $q.defer();
+                $resource('/api/users').query({},function (event)
+                    {
+                       deferred.resolve(event);
+                    },
+                    function(response){
+                        deferred.reject(response);
                     });
-
-                return deffered.promise;
+                return deferred.promise;
             }
    };
 });
