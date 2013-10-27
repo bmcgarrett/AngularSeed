@@ -2,14 +2,7 @@
 
 /* Filters */
 
-angular.module('myApp.filters', []).
-  filter('interpolate', ['version', function(version) {
-    return function(text) {
-      return String(text).replace(/\%VERSION\%/mg, version);
-    }
-  }]);
-
-  myApp.filter('size', function(){
+myApp.filter('size', function(){
     return function(size){
         switch (size){
             case "s":
@@ -18,6 +11,8 @@ angular.module('myApp.filters', []).
                 return "Medium";
             case "l":
                 return "Large";
+            case "xl":
+                return "Extra Large";
         }
     }
 });

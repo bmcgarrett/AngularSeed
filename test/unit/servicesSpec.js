@@ -2,13 +2,13 @@
 
 /* jasmine specs for services go here */
 
-describe('service', function() {
-  beforeEach(module('myApp.services'));
+describe('services', function() {
+    beforeEach(module('myApp'));
 
-
-  describe('version', function() {
-    it('should return current version', inject(function(version) {
-      expect(version).toEqual('0.2');
-    }));
+  describe('constants',function() {
+      it('should return Brendan McGarrett for getName', inject(function(constants){
+          expect(constants.getName).toEqual('Brendan McGarrett');
+      }));
   });
+
 });
